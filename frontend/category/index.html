@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/86b7756615.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="header_menu" id="head_div">
+            <div class="dropdown">
+                <button class="menu_button">MENU</button>
+                <div class="dropdown-content">
+                    <a href="/">MAIN PAGE</a>
+                    <a href="/categories">CATEGORIES</a>
+                    <a href="#footer">CONTACTS</a>
+                </div>
+            </div>
+
+            <div class="spacer">
+                <input type="text" placeholder="What are you searching for?">
+            </div>
+
+            <div class="header-buttons">
+                <div class="btn-wrapper">
+                    <button class="b_button" data-behavior="showLikes">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <ul class="modal-list" id="likes-list"></ul>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="b_button" data-behavior="showCart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                    <ul class="modal-list" id="cart-list"></ul>
+                </div>
+
+                <button class="b_button"><i class="fa-regular fa-user"></i></button>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="space"></div>
+    <section id="controls" >
+        <div class="control">6 Results</div>
+        <div class="control">VIEW</div>
+        <div class="view-options">
+            <button title="Grid view"><i class="fa-solid fa-grip-vertical"></i></button>
+            <button title="List view"><i class="fa-solid fa-grip"></i></button>
+        </div>
+        <div class="control">
+            <label for="sort">SORT BY</label>
+            <select id="sort" class="sort-select">
+                <option value="name-asc">Name A-Z</option>
+                <option value="name-desc">Name Z-A</option>
+                <option value="price-asc">Price Low to High</option>
+                <option value="price-desc">Price High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="wrapper">
+        <aside>
+            <span style="float: right; padding-top: 25px">clear all</span>
+            <h2>Filters</h2>
+            <hr>
+            <div class="filter-group">
+                <p>Designer
+                    <span class="span-button">
+                        <button onclick="toggleFilterAttr('designer-options')">+</button>
+                    </span>
+                </p>
+                <ul id="designer-options" class="filter-options">
+                    <!-- чекбокси кольорів буде додано JS -->
+                </ul>
+            </div>
+        </aside>
+
+        <div class="product_wrapper">
+            <!-- Сюди JS додасть товари -->
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <p>For any inquiries or assistance, feel free to reach out to us using the contact information below</p>
+    <div class="footer_info">
+        <div class="contacts">
+            <p class="number">+1 000 000 00 00</p>
+            <p class="email">te_contactUs@mail.com</p>
+            <p class="address">Mar Vista 12928 Venice Blvd. Chicago, CA 9066</p>
+        </div>
+        <div class="links">
+            <i class="fa-brands fa-instagram"></i><a id="inst" href="https://www.instagram.com/p/DHKXAFzN8vr/" target="_blank">INSTAGRAM</a><br>
+            <i class="fa-brands fa-pinterest"></i><a id="pint" href="???" target="_blank">PINTEREST</a><br>
+            <i class="fa-brands fa-facebook"></i><a id="facebook" href="https://www.facebook.com/reel/3908534479408058" target="_blank">FACEBOOK</a>
+        </div>
+    </div>
+    <p class="rights-info">© 2025 Babenko company. All rights reserved.</p>
+</footer>
+</body>
+
+
+<script src="script.js"></script>
+</html>

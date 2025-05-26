@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="scriptimages.js"></script>
+</head>
+<body>
+<header><h2>ADMIN PAGE</h2>
+    <nav>
+        <a href="http://localhost:3000/admincategories">Categories</a>
+        <a href="http://localhost:3000/adminclients">Clients</a>
+        <a href="http://localhost:3000/admincolors">Colors</a>
+        <a class="active" href="http://localhost:3000/adminimages">Images</a>
+        <a href="http://localhost:3000/admin">Products</a>
+        <a href="http://localhost:3000/adminreviews">Reviews</a>
+    </nav>
+</header>
+
+<main>
+
+    <h3>Images</h3>
+
+    <div class="data_box">
+        <div class="table_div">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Products ID</th>
+                    <th>Colors ID</th>
+                    <th>Link</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+
+        <div class="add_data">
+            <p> Add new images data </p>
+            <form id="images" action="" method="post" enctype="multipart/form-data">
+
+                <label for="products_id">Products ID: </label><br>
+                <select name="products_id" id="products_id" required>
+                    <option value="" disabled selected>Select ID</option>
+                </select><br>
+                <label for="colors_id">Colors ID: </label><br>
+                <select name="colors_id" id="colors_id" required>
+                    <option value="" disabled selected>Select ID</option>
+                </select><br>
+                <label for="link">Image: </label>
+                <input type="file" name="photo" id="link">
+
+                <label for="link" class="custom-file-upload">Choose file </label><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<footer></footer>
+</body>
+</html>

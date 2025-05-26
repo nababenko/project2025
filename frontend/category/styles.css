@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:normal;
+    font-style: normal;
+    color: #646056;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+/* HEADER */
+
+header{
+    position: fixed;
+    margin-top: 20px;
+    width: 100%;
+    z-index: 3;
+    background-color: #f8f8f8;
+}
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.spacer {
+    flex-grow: 1;
+}
+.spacer input{
+    all: unset;
+    font-size: 10px;
+    padding: 5px 12px;
+    border: 1px solid #646056;
+    border-radius: 20px;
+    float: right;
+    width: 50%;
+}
+.spacer input::placeholder {
+    color: gray;
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.header_menu button{
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu_button{
+    padding-top: 5px;
+    cursor: pointer;
+    color: #646056;
+}
+
+.b_button i{
+    font-size: 24px;
+    padding-left: 5px;
+    color: #646056;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    min-width: 300px;
+    z-index: 3;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #646056;
+    margin: 5px 20px 0 20px;
+    font-size: 30px;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #676158;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*  FOOTER */
+footer > p{
+    margin-left: 5px;
+    font-size: 32px;
+    letter-spacing: 6px;
+}
+footer a{
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 32px;
+}
+footer a:link{
+    color: black;
+}
+footer a:visited{
+    text-decoration: line-through;
+}
+
+#inst:hover, #inst:active{
+    color: #D23C7D;
+}
+#facebook:hover, #facebook:active{
+    color: #3B579D;
+}
+#pint:hover, #pint:active{
+    color: red;
+}
+
+footer i{
+    font-size: 32px;
+}
+
+.footer_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+.rights-info{
+    font-size: 10px;
+}
+
+
+
+
+
+
+.filter-options {
+    display: none;
+    margin-top: 5px;
+}
+.filter-options.show {
+    display: block;
+}
+.filters label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+#wrapper{
+    display: flex;
+    margin-top: 3%;
+    margin-bottom: 12%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.space{
+    height: 10vh;
+}
+#controls {
+    border-top: 2px solid #646056;
+    border-bottom: 2px solid #646056;
+    display: flex;
+    justify-content: right;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-right: 8%;
+    font-size: 18px;
+    color: #646056;
+}
+#controls button{
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #bababa;
+}
+.control{margin-left: 6%; margin-right: 10px;}
+.sort-select{
+    background: none;
+    border: none;
+    margin-left: 10px;
+}
+.sort-select option{
+    color: #bababa !important;
+}
+aside {
+    position: sticky;
+    top: 100px;
+    width: 20%;
+    align-self: flex-start;
+}
+.span-button{
+    float: right;
+}
+.span-button button{
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+ul{
+    all: unset;
+    list-style: none;
+}
+
+
+.highlighted {
+    background-color: #ccc;
+}
+
+
+
+.product_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    aspect-ratio: 4 / 3;
+}
+
+.name,
+.designer,
+.price {
+    margin-top: 8px;
+}
+
+.rights{
+    font-size: 24px;
+    float: right;
+}
+#line{
+    width: 100%;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    border-bottom: 1px solid #646056;
+}
+
+.reaction button{
+    background: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    transition-duration: 2s;
+}
+.reaction i{
+    color: #646056;
+}
+.reaction button:hover{
+    background: #ccc;
+    cursor: pointer;
+}
+
+
+/* bucket and like  */
+.modal-list {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+
+.btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.visible {
+    display: block;
+}
+

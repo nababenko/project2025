@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>té Furniture</title>
+    <link rel="stylesheet" href="stylesmain.css">
+
+    <script src="https://kit.fontawesome.com/86b7756615.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="header_menu" id="head_div">
+            <div class="dropdown">
+                <button class="menu_button">MENU</button>
+                <div class="dropdown-content">
+                    <a href="#about_us">ABOUT US</a>
+                    <a href="#products">CATEGORIES</a>
+                    <a href="#materials">MATERIALS</a>
+                    <a href="#shop_in_store">SHOP IN STORE</a>
+                    <a href="#footer">CONTACTS</a>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div>
+                <a class="products_link" href="/categories">PRODUCTS</a>
+                <button class="bucket_button"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+    <section class="welcome">
+        <p id="scalable-text">té</p>
+        <p id="fixed-text">té</p>
+    </section>
+
+
+
+    <section class="about_us" id="about_us">
+        <div class="about_info">
+            <p class="head">ABOUT US</p>
+            <p class="text">We specialize in offering high-quality, stylish furniture designed to elevate any living space. Our curated selection combines comfort, functionality, and modern aesthetics to meet the diverse needs of our customers. With a commitment to exceptional craftsmanship and customer service, we help you create a home that reflects your unique style.</p>
+        </div>
+        <div class="slider_wrapper">
+            <div class="slideshow_container">
+
+                <div class="mySlides fade">
+                    <img src="../../resources/2.jpg" alt="photo1">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../../resources/3.jpg" alt="photo2">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../../resources/1.jpg" alt="photo3" >
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)"></a>
+                <a class="next" onclick="plusSlides(1)"></a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="products" id="products">
+        <ul >
+            <li><a href="/category/Beds" id="l1">BEDS</a></li>
+            <li><a href="/category/Decor" id="l2">DECOR</a></li>
+            <li><a href="/category/Tables" id="l3">TABLES</a></li>
+            <li><a href="/category/Shelves" id="l4">SHELVES</a></li>
+            <li><a href="/category/Armchairs" id="l5">ARMCHAIRS</a></li>
+            <li><a href="/category/Sofas" id="l6">SOFAS</a></li>
+        </ul>
+    </section>
+
+    <section class="materials" id="materials">
+        <div class="materials_info">
+            <p class="materials_head">MATERIALS</p>
+            <p class="materials_text">We take pride in using only premium materials for all our furniture pieces, ensuring durability and long-lasting quality. From solid wood and metal to luxurious fabrics and leathers, each material is carefully selected for its strength and aesthetic appeal. Our commitment to sustainable sourcing means you can enjoy beautiful, eco-friendly furniture that stands the test of time.</p>
+        </div>
+        <div class="materials_photos_container">
+            <img src="../../resources/8.png" alt="item1" >
+            <img src="../../resources/5.png" alt="item2" >
+            <img src="../../resources/15.png" alt="item3" >
+            <img src="../../resources/16.png" alt="item4" >
+            <img src="../../resources/14.png" alt="item5">
+        </div>
+    </section>
+
+
+
+    <section class="shop_in_store" id="shop_in_store">
+        <div class="photo_item"><img id="modal_photo" src="../../resources/location.jpg" alt="shop in store picture" ></div>
+        <div class="shop_info">
+            <p class="head">SHOP IN STORE</p>
+            <p class="text">Shop in-store at our convenient location in Chicago and explore our wide range of quality furniture pieces firsthand.</p>
+            <a href="???" class="shop_info_button">Find a store</a>
+        </div>
+    </section>
+
+
+</main>
+
+
+<footer id="footer">
+    <!--<p class="footer_text">For any inquiries or assistance, feel free to reach out to us using the contact information below</p>-->
+    <p class="footer_text"> Курсова робота з дисципліни "БАЗИ ДАНИХ". Виконала студентка ІС-33 Бабенко Анастасія</p>
+    <div class="footer_info">
+        <div class="contacts">
+            <p class="number">+1 000 000 00 00</p>
+            <p class="email">te_contactUs@mail.com</p>
+            <p class="address">Mar Vista 12928 Venice Blvd. Chicago, CA 9066</p>
+        </div>
+        <div class="links">
+            <i class="fa-brands fa-instagram"></i><a id="inst" href="???">INSTAGRAM</a><br>
+            <i class="fa-brands fa-pinterest"></i><a id="pint" href="???">PINTEREST</a><br>
+            <i class="fa-brands fa-facebook"></i><a id="facebook" href="???">FACEBOOK</a>
+        </div>
+    </div>
+    <p class="rights">© 2024 Babenko company. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+</body>
+</html>

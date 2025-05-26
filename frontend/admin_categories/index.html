@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <h2>ADMIN PAGE</h2>
+    <nav>
+        <a class="active" href="http://localhost:3000/admincategories">Categories</a>
+        <a href="http://localhost:3000/adminclients">Clients</a>
+        <a href="http://localhost:3000/admincolors">Colors</a>
+        <a href="http://localhost:3000/adminimages">Images</a>
+        <a href="http://localhost:3000/admin">Products</a>
+        <a href="http://localhost:3000/adminreviews">Reviews</a>
+    </nav>
+</header>
+
+<main>
+
+    <h3>Categories</h3>
+    <div class="data_box">
+        <div class="table_div">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+
+        <div class="add_data">
+            <p> Add new category </p>
+            <form id="category" action="" method="post" enctype="multipart/form-data">
+                <label for="categories_name">Name:</label>
+                <input type="text" name="name" id="categories_name" required><br>
+
+                <label for="categories_description">Description: </label>
+                <textarea  name="description" class="long" id="categories_description" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<footer></footer>
+</body>
+</html>

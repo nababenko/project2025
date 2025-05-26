@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <h2>ADMIN PAGE</h2>
+    <nav>
+        <a class="active" href="http://localhost:3000/admincarts">Carts</a>
+        <a href="http://localhost:3000/admincategories">Categories</a>
+        <a href="http://localhost:3000/adminclients">Clients</a>
+        <a href="http://localhost:3000/admincolors">Colors</a>
+        <a href="http://localhost:3000/adminimages">Images</a>
+        <a href="http://localhost:3000/admin">Products</a>
+        <a href="http://localhost:3000/adminreviews">Reviews</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <h3>Carts</h3>
+    <div class="data_box">
+        <div class="table_div">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Clients ID</th>
+                    <th>Carts date</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data_carts"></tbody>
+            </table>
+        </div>
+
+        <div class="add_data">
+            <p> Add new cart </p>
+            <form id="cart" action="" method="post" enctype="multipart/form-data">
+                <select name="client_id" id="client_id" required>
+                    <option value="" disabled selected>Select a client id</option>
+                </select><br>
+                <label for="date">Date: </label><br>
+                <input type="date" id="date" required>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="data_box">
+        <div class="table_div">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Carts ID</th>
+                    <th>Products ID</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data_cartsp"></tbody>
+            </table>
+        </div>
+
+        <div class="add_data">
+            <p> Add new like </p>
+            <form id="cp" action="" method="post" enctype="multipart/form-data">
+
+                <select name="carts_id" id="carts_id" required>
+                    <option value="" disabled selected>Select a cart id</option>
+                </select><br>
+                <select name="product" id="cproduct_id" required>
+                    <option value="" disabled selected>Select a product id</option>
+                </select><br>
+                <label for="qua">Quantity: </label><br>
+                <input type="number" id="qua" required>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<footer></footer>
+</body>
+</html>

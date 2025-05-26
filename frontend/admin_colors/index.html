@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <h2>ADMIN PAGE</h2>
+    <nav>
+        <a href="http://localhost:3000/admincategories">Categories</a>
+        <a href="http://localhost:3000/adminclients">Clients</a>
+        <a class="active" href="http://localhost:3000/admincolors">Colors</a>
+        <a href="http://localhost:3000/adminimages">Images</a>
+        <a href="http://localhost:3000/admin">Products</a>
+        <a href="http://localhost:3000/adminreviews">Reviews</a>
+    </nav>
+</header>
+<div style="display: flex">
+    <h3 style="margin-left: 16px">Colors</h3>
+    <h3 style="margin-left: 37%">Products colors</h3>
+</div>
+<main>
+
+    <div class="data_box colors">
+        <div class="table_div colors">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>HEX</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+
+        <div class="add_data">
+            <p> Add new color </p>
+            <form id="color" action="" method="post" enctype="multipart/form-data">
+                <label for="colors_name">Name:</label>
+                <input type="text" name="name" id="colors_name" required><br>
+
+                <label for="colors_hex">HEX: </label>
+                <input type="text" name="hex" id="colors_hex" required><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="data_box colors-products">
+        <div class="table_div colors-products">
+            <table>
+                <thead>
+                <tr>
+                    <th>Colors ID</th>
+                    <th>Products ID</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data_pc"></tbody>
+            </table>
+        </div>
+
+        <div class="add_data">
+            <p> Add new data </p>
+            <form id="product" action="" method="post" enctype="multipart/form-data">
+                <select name="c_id" id="color_id" required>
+                    <option value="" disabled selected>Select a color id</option>
+                </select><br>
+                <select name="p_id" id="cproduct_id" required>
+                    <option value="" disabled selected>Select a product id</option>
+                </select><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header><h2>ADMIN PAGE</h2>
+    <nav>
+        <a href="http://localhost:3000/admincategories">Categories</a>
+        <a href="http://localhost:3000/adminclients">Clients</a>
+        <a href="http://localhost:3000/admincolors">Colors</a>
+        <a href="http://localhost:3000/adminimages">Images</a>
+        <a href="http://localhost:3000/admin">Products</a>
+        <a class="active" href="http://localhost:3000/adminreviews">Reviews</a>
+    </nav>
+</header>
+
+<main>
+
+    <h3>Reviews</h3>
+    <div class="data_box">
+        <div class="table_div">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Clients ID</th>
+                    <th>Products ID</th>
+                    <th>Date</th>
+                    <th>Rate</th>
+                    <th>Title</th>
+                    <th>Comment</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</main>
+
+<footer></footer>
+</body>
+</html>
