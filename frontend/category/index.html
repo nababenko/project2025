@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../header.css">
     <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/86b7756615.js" crossorigin="anonymous"></script>
@@ -48,11 +49,11 @@
 <main>
     <div class="space"></div>
     <section id="controls" >
-        <div class="control">6 Results</div>
+        <div class="control"> Results</div>
         <div class="control">VIEW</div>
         <div class="view-options">
-            <button title="Grid view"><i class="fa-solid fa-grip-vertical"></i></button>
-            <button title="List view"><i class="fa-solid fa-grip"></i></button>
+            <button onclick="HandleView('grid_view')" title="Grid view"><i class="fa-solid fa-grip-vertical"></i></button>
+            <button onclick="HandleView('list_view')" title="List view"><i class="fa-solid fa-grip"></i></button>
         </div>
         <div class="control">
             <label for="sort">SORT BY</label>
@@ -67,23 +68,31 @@
 
     <section id="wrapper">
         <aside>
-            <span style="float: right; padding-top: 25px">clear all</span>
+            <span id="clear_btn" style="float: right; padding-top: 25px">clear all</span>
             <h2>Filters</h2>
             <hr>
             <div class="filter-group">
                 <p>Designer
                     <span class="span-button">
-                        <button onclick="toggleFilterAttr('designer-options')">+</button>
+                        <button onclick="toggleFilterAttr('designer-options', this)">+</button>
                     </span>
                 </p>
                 <ul id="designer-options" class="filter-options">
+                    <!-- чекбокси кольорів буде додано JS -->
+                </ul>
+                <p>Color
+                    <span class="span-button">
+                        <button onclick="toggleFilterAttr('colors-options', this)">+</button>
+                    </span>
+                </p>
+                <ul id="colors-options" class="filter-options">
                     <!-- чекбокси кольорів буде додано JS -->
                 </ul>
             </div>
         </aside>
 
         <div class="product_wrapper">
-            <!-- Сюди JS додасть товари -->
+
         </div>
     </section>
 </main>
@@ -101,7 +110,8 @@
             <i class="fa-brands fa-facebook"></i><a id="facebook" href="https://www.facebook.com/reel/3908534479408058" target="_blank">FACEBOOK</a>
         </div>
     </div>
-    <p class="rights-info">© 2025 Babenko company. All rights reserved.</p>
+    <p class="rights-info">© 2025. This project is non-commercial and created for educational purposes only.
+        All trademarks and copyrights belong to their respective owners.</p>
 </footer>
 </body>
 

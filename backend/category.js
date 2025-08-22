@@ -17,7 +17,7 @@ categoryRouter.get("/:name", (req, res) => {
 
 categoryRouter.get("/:name/products", (req, res) => {
     const categoryName = req.params.name;
-    const { sortField, sortOrder, designer } = req.query;
+    const { sortField, sortOrder, designer, color } = req.query;
 
     const getID = 'SELECT categories_id FROM categories WHERE categories_name = ?';
 
@@ -32,16 +32,28 @@ categoryRouter.get("/:name/products", (req, res) => {
         }
 
         const categoryId = idResult[0].categories_id;
-        let query = `SELECT * FROM products WHERE products_categories_id = ?`;
+        let query = `SELECT DISTINCT p.*
+        FROM products p 
+        LEFT JOIN products_colors pc ON p.products_id = pc.products_colors_pID
+        LEFT JOIN colors c ON pc.products_colors_cID = c.colors_id
+        WHERE p.products_categories_id=?`;
         let params = [categoryId];
 
         // Фільтрація по дизайнерах
         if (designer) {
             const designers = Array.isArray(designer) ? designer : [designer];
             const placeholders = designers.map(() => '?').join(', ');
-            query += ` AND products_designer IN (${placeholders})`;
-            params = [categoryId, ...designers];
+            query += ` AND p.products_designer IN (${placeholders})`;
+            params.push(...designers);
         }
+        if (color) {
+            const colorsID = Array.isArray(color) ? color : [color];
+            const placeholders = colorsID.map(() => '?').join(', ');
+            query += ` AND c.colors_id IN (${placeholders})`;
+            params.push(...colorsID);
+        }
+
+
 
         // Сортування
         const allowedSortFields = ['name', 'price'];
@@ -61,8 +73,26 @@ categoryRouter.get("/:name/products", (req, res) => {
                 return res.status(500).json({ message: 'Internal Server Error' });
             }
 
-            res.json(rows); // Обов'язково повертаємо масив
+            res.json(rows);
         });
+    });
+});
+categoryRouter.get("/products/:id/colors", (req, res) => {
+    const prodID = req.params.id;
+    const query = `
+    SELECT c.colors_hex
+    FROM products_colors pc
+    JOIN colors c ON pc.products_colors_cID = c.colors_id
+    WHERE pc.products_colors_pID = ?`;
+
+    db.query(query, [prodID], (err, rows) => {
+        if (err) {
+            console.error('Error fetching product colors:', err);
+            return res.status(500).json({ message: 'Internal Server Error' });
+        }
+
+        const hexList = rows.map((row) => row.colors_hex);
+        res.json(hexList);
     });
 });
 

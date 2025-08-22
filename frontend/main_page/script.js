@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
         element.classList.remove("header_menu_done");
         element.classList.add("header_menu");
     }
-    // зменшення розміру текту при прокрутці
+    // changing font size by scrolling
     const scalableText = document.getElementById("scalable-text");
     const scrollPosition = window.scrollY;
 

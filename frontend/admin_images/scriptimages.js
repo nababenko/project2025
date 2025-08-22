@@ -113,7 +113,7 @@ function editRow(id) {
 
             modal.appendChild(modalContent);
             document.body.appendChild(modal);
-//!
+
             const productSelect = form.querySelector('#product_id');
             fetch('/adminimages/api/products')
                 .then(response => response.json())

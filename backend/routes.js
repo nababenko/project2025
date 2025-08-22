@@ -15,6 +15,7 @@ const admincolorsRouter = require('./admin_colors');
 const adminreviewsRouter = require('./admin_reviews');
 const adminclientsRouter = require('./admin_clients');
 const admincartsRouter = require('./admin_carts');
+const productRouter = require('./product');
 
 router.use(express.static(path.join(__dirname, '..', 'frontend')));
 router.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -28,6 +29,7 @@ router.use('/admincolors', admincolorsRouter);
 router.use('/adminreviews', adminreviewsRouter);
 router.use('/adminclients', adminclientsRouter);
 router.use('/admincarts', admincartsRouter);
+router.use('/product', productRouter);
 
 
 

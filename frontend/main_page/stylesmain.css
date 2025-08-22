@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/*!!!!поміняти колір тексту в інпуті!!!!*/
+
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -50,11 +52,36 @@ header{
     color: white;
     cursor: pointer;
 }
+
 .menu_button{
     padding-top: 5px;
     cursor: pointer;
 }
 
+.btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.b_button i{
+     font-size: 24px;
+     padding-left: 5px;
+     color: rgba(255, 255, 255, 0.89);
+ }
+
+.spacer input{
+    all: unset;
+    font-size: 10px;
+    padding: 5px 12px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    float: right;
+    width: 50%;
+}
+.spacer input::placeholder {
+    color: #fff;
+    font-size: 10px;
+    opacity: 0.7;
+}
 
 .dropdown {
     position: relative;
@@ -122,6 +149,13 @@ header{
 .header_menu_done .dropdown-content a:hover{
     color: white;
 }
+.header_menu_done input{
+    border: 1px solid rgba(103, 97, 88, 1);
+}
+.header_menu_done input::placeholder {
+    color: rgba(103, 97, 88, 1);
+}
+
 
 
 
