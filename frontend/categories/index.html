@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Categories</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../header.css">
     <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
@@ -49,11 +48,8 @@
 </header>
 
 <main>
-    <div class="space"></div>
-    <hr>
-    <div class="categories_list">
-        <div class="list" id="list"></div>
-    </div>
+    <div class="objects-wrapper"></div>
+    <div class="others-categories"></div>
 </main>
 
 <footer id="footer">
@@ -73,5 +69,10 @@
     <p class="rights-info">© 2025. This project is non-commercial and created for educational purposes only.
         All trademarks and copyrights belong to their respective owners.</p>
 </footer>
+
+<!-- Three.js + GLTFLoader -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
